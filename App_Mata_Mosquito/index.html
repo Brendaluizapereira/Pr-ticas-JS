@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	
+	<link rel="stylesheet" href="estilo.css">
+
+	<script>
+		function iniciarjogo() {
+			var nivel = document.getElementById('nivel').value
+
+			if(nivel === '') {
+				alert('Selecione um nível para iniciar o jogo')
+				return false
+			}
+
+			window.location.href = "app.html?" + nivel
+		}
+	</script>
+	<title></title>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div class="d-flex justify-content-center">
+					<img src="imagens/game.png">
+					<!--<p style="font-weight: bold; color: #fff; font-size: 100px; margin-top: 57px">
+						Parabéns, Rebeca!!!
+					</p>-->
+				</div>
+			</div>
+		</div>
+
+<div class="row">
+		<div class="col">
+				<div class="d-flex justify-content-center">
+					<div class="mb-2">
+						<select class="form-control" id="nivel">
+							<option value="">-- Selecione o nível --</option>
+							<option value="normal">-- Normal --</option>
+							<option value="dificil">-- Difícil --</option>
+							<option value="chucknorris">-- Chuck NOrris --</option>
+						</select>
+					</div>
+				</div>
+		</div>
+</div>
+
+		<div class="row">
+			<div class="col">
+				<div class="d-flex justify-content-center">
+					<button type="button" class="btn btn-danger btn-lg" onclick="iniciarjogo()">
+						Iniciar Jogo
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
